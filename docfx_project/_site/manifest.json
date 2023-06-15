@@ -1,0 +1,712 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/gvescu/Dev/F1Sharp/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Button.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Button.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.DriverStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.DriverStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Formula.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Formula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.GameMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.GameMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.InfringementType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.InfringementType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.MfdPanelIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.MfdPanelIndex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.PacketHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.PacketHeader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.PacketType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.PacketType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.Buttons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.Buttons.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.CarSetupData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.CarSetupData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.CarSetupPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.CarSetupPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.CarTelemetryData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.CarTelemetryData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.CarTelemetryPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.CarTelemetryPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.DriveThroughPenaltyServed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.DriveThroughPenaltyServed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.EventDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.EventDetails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.EventPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.EventPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.FastestLap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.FastestLap.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.Flashback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.Flashback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.LapData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.LapData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.LapDataPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.LapDataPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.MarshalZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.MarshalZone.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.MotionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.MotionData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.MotionPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.MotionPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.Overtake.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.Overtake.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.ParticipantData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.ParticipantData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.ParticipantsPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.ParticipantsPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.Penalty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.Penalty.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.RaceWinner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.RaceWinner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.Retirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.Retirement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.SessionPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.SessionPacket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.SpeedTrap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.SpeedTrap.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.StartLights.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.StartLights.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.StopGoPenaltyServed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.StopGoPenaltyServed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.TeamMateInPits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.TeamMateInPits.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.WeatherForecastSample.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.WeatherForecastSample.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Packets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Packets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.PenaltyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.PenaltyType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.PitStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.PitStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Platform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.ResultStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.ResultStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.RuleSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.RuleSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.SafetyCarStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.SafetyCarStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Sector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Sector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Session.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.SessionLength.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.SessionLength.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.SpeedUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.SpeedUnit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.SurfaceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.SurfaceType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.CarSetupDataReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.CarSetupDataReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.CarTelemetryDataReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.CarTelemetryDataReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.ConnectedStatusChangeDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.ConnectedStatusChangeDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.EventDetailsReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.EventDetailsReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.LapDataReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.LapDataReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.MotionDataReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.MotionDataReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.ParticipantsDataReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.ParticipantsDataReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.SessionDataReceiveDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.SessionDataReceiveDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TelemetryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TelemetryClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.TemperatureUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.TemperatureUnit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Track.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Track.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Weather.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Weather.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.Wheel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.Wheel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.ZoneFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.ZoneFlag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/F1Sharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/F1Sharp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

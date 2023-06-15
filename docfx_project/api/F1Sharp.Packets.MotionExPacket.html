@@ -1,0 +1,814 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct MotionExPacket
+ | F1Sharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct MotionExPacket
+ | F1Sharp ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="F1Sharp">
+            F1Sharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="F1Sharp.Packets.MotionExPacket">
+
+
+
+  <h1 id="F1Sharp_Packets_MotionExPacket" data-uid="F1Sharp.Packets.MotionExPacket" class="text-break">
+    Struct MotionExPacket
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="F1Sharp.html">F1Sharp</a>.<a class="xref" href="F1Sharp.Packets.html">Packets</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>F1Sharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The motion packet gives extended data for the car being driven with the goal of being able to drive a motion platform setup.</p>
+<p>All wheel arrays have the following order: <code>[RL, RR, FL, FR]</code></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct MotionExPacket</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_angularAccelerationX" data-uid="F1Sharp.Packets.MotionExPacket.angularAccelerationX">
+  angularAccelerationX
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Angular acceleration X component in radians per second squared</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angularAccelerationX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_angularAccelerationY" data-uid="F1Sharp.Packets.MotionExPacket.angularAccelerationY">
+  angularAccelerationY
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Angular acceleration Y component in radians per second squared</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angularAccelerationY</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_angularAccelerationZ" data-uid="F1Sharp.Packets.MotionExPacket.angularAccelerationZ">
+  angularAccelerationZ
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Angular acceleration Z component in radians per second squared</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angularAccelerationZ</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_angularVelocityX" data-uid="F1Sharp.Packets.MotionExPacket.angularVelocityX">
+  angularVelocityX
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Angular velocity X component in radians per second</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angularVelocityX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_angularVelocityY" data-uid="F1Sharp.Packets.MotionExPacket.angularVelocityY">
+  angularVelocityY
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Angular velocity Y component in radians per second</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angularVelocityY</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_angularVelocityZ" data-uid="F1Sharp.Packets.MotionExPacket.angularVelocityZ">
+  angularVelocityZ
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Angular velocity Z component in radians per second</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float angularVelocityZ</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_frontWheelsAngle" data-uid="F1Sharp.Packets.MotionExPacket.frontWheelsAngle">
+  frontWheelsAngle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current front wheels angle in radians</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float frontWheelsAngle</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_header" data-uid="F1Sharp.Packets.MotionExPacket.header">
+  header
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Packet header</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PacketHeader header</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="F1Sharp.PacketHeader.html">PacketHeader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_heightOfCOGAboveGround" data-uid="F1Sharp.Packets.MotionExPacket.heightOfCOGAboveGround">
+  heightOfCOGAboveGround
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Height of center of gravity above ground</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float heightOfCOGAboveGround</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_localVelocityX" data-uid="F1Sharp.Packets.MotionExPacket.localVelocityX">
+  localVelocityX
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Velocity in local space X in meters per second</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float localVelocityX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_localVelocityY" data-uid="F1Sharp.Packets.MotionExPacket.localVelocityY">
+  localVelocityY
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Velocity in local space Y in meters per second</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float localVelocityY</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_localVelocityZ" data-uid="F1Sharp.Packets.MotionExPacket.localVelocityZ">
+  localVelocityZ
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Velocity in local space Z in meters per second</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float localVelocityZ</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_suspensionAcceleration" data-uid="F1Sharp.Packets.MotionExPacket.suspensionAcceleration">
+  suspensionAcceleration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Suspension acceleration for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] suspensionAcceleration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_suspensionPosition" data-uid="F1Sharp.Packets.MotionExPacket.suspensionPosition">
+  suspensionPosition
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Suspension position for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] suspensionPosition</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_suspensionVelocity" data-uid="F1Sharp.Packets.MotionExPacket.suspensionVelocity">
+  suspensionVelocity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Suspension velocity for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] suspensionVelocity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_wheelLatForce" data-uid="F1Sharp.Packets.MotionExPacket.wheelLatForce">
+  wheelLatForce
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lateral forces for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] wheelLatForce</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_wheelLongForce" data-uid="F1Sharp.Packets.MotionExPacket.wheelLongForce">
+  wheelLongForce
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Longitudinal forces for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] wheelLongForce</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_wheelSlipAngle" data-uid="F1Sharp.Packets.MotionExPacket.wheelSlipAngle">
+  wheelSlipAngle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Slip angles for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] wheelSlipAngle</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_wheelSlipRatio" data-uid="F1Sharp.Packets.MotionExPacket.wheelSlipRatio">
+  wheelSlipRatio
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Slip ratio for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] wheelSlipRatio</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_wheelSpeed" data-uid="F1Sharp.Packets.MotionExPacket.wheelSpeed">
+  wheelSpeed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Speed of each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] wheelSpeed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="F1Sharp_Packets_MotionExPacket_wheelVertForce" data-uid="F1Sharp.Packets.MotionExPacket.wheelVertForce">
+  wheelVertForce
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertical forces for each wheel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] wheelVertForce</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
