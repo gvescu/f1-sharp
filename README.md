@@ -1,6 +1,6 @@
 # F1Sharp
 
-Receive and parse the telemetry packets from the EA SPORTS™ F1® 23 game, and hopefully future ones too.
+Receive and parse the telemetry packets from the F1® 23 game, and hopefully future ones too.
 
 Current UDP specification can be found [here](https://answers.ea.com/ea/attachments/ea/f1-23-general-discussion-en/2776/3/Data%20Output%20from%20F1%2023%20v29x3.docx).
 
