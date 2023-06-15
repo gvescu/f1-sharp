@@ -11,7 +11,7 @@ namespace F1Sharp.Data
         /// <summary>
         /// Speed in kilometers per hour
         /// </summary>
-        public uint speed;
+        public ushort speed;
         /// <summary>
         /// Amount of throttle applied (0..1)
         /// </summary>
