@@ -1,12 +1,10 @@
-﻿using System.Runtime.InteropServices;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using F1Sharp;
+using F1Sharp.Data;
 
-namespace F1Sharp.Data
+namespace F1Sharp.ViewModels
 {
-    /// <summary>
-    /// Car status data
-    /// </summary>
-    [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public struct CarStatusData
+    public partial class CarStatusViewModel : ObservableObject
     {
         /// <summary>
         /// <para>Traction control level</para>
@@ -29,7 +27,9 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte tractionControl;
+        [ObservableProperty]
+        private byte _tractionControl;
+
         /// <summary>
         /// <para>ABS status</para>
         /// <list type="table">
@@ -47,7 +47,9 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte antiLockBrakes;
+        [ObservableProperty]
+        private byte _antiLockBrakes;
+
         /// <summary>
         /// <para>Current fuel mix</para>
         /// <list type="table">
@@ -73,11 +75,15 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte fuelMix;
+        [ObservableProperty]
+        private byte _fuelMix;
+
         /// <summary>
         /// Front brake bias (percentage)
         /// </summary>
-        public byte frontBrakeBias;
+        [ObservableProperty]
+        private byte _frontBrakeBias;
+
         /// <summary>
         /// <para>Pit limiter status</para>
         /// <list type="table">
@@ -95,31 +101,45 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte pitLimiterStatus;
+        [ObservableProperty]
+        private byte _pitLimiterStatus;
+
         /// <summary>
         /// Current fuel mass
         /// </summary>
-        public float fuelInTank;
+        [ObservableProperty]
+        private float _fuelInTank;
+
         /// <summary>
         /// Fuel capacity
         /// </summary>
-        public float fuelCapacity;
+        [ObservableProperty]
+        private float _fuelCapacity;
+
         /// <summary>
         /// Fuel remaining in terms of laps (value on MFD)
         /// </summary>
-        public float fuelRemainingLaps;
+        [ObservableProperty]
+        private float _fuelRemainingLaps;
+
         /// <summary>
         /// Car's max RPM, point of rev limiter
         /// </summary>
-        public ushort maxRPM;
+        [ObservableProperty]
+        private ushort _maxRPM;
+
         /// <summary>
         /// Car's idle RPM
         /// </summary>
-        public ushort idleRPM;
+        [ObservableProperty]
+        private ushort _idleRPM;
+
         /// <summary>
         /// Maximum number of gears
         /// </summary>
-        public byte maxGears;
+        [ObservableProperty]
+        private byte _maxGears;
+
         /// <summary>
         /// <para>Whether the DRS is allowed</para>
         /// <list type="table">
@@ -137,7 +157,9 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte drsAllowed;
+        [ObservableProperty]
+        private byte _drsAllowed;
+
         /// <summary>
         /// <para>Distance where DRS will be available</para>
         /// <list type="table">
@@ -155,35 +177,51 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public ushort drsActivationDistance;
+        [ObservableProperty]
+        private ushort _drsActivationDistance;
+
         /// <summary>
         /// Tyre compound
         /// </summary>
-        public TyreCompound actualTyreCompound;
+        [ObservableProperty]
+        private TyreCompound _actualTyreCompound;
+
         /// <summary>
         /// Visual tyre compound
         /// </summary>
-        public VisualTyreCompound visualTyreCompound;
+        [ObservableProperty]
+        private VisualTyreCompound _visualTyreCompound;
+
         /// <summary>
         /// Age in laps of current set of tyres
         /// </summary>
-        public byte tyresAgeLaps;
+        [ObservableProperty]
+        private byte _tyresAgeLaps;
+
         /// <summary>
         /// Flags shown to the car
         /// </summary>
-        public ZoneFlag vehicleFiaFlags;
+        [ObservableProperty]
+        private ZoneFlag _vehicleFiaFlags;
+
         /// <summary>
         /// Engine power output of ICE in watts
         /// </summary>
-        public float enginePowerICE;
+        [ObservableProperty]
+        private float _enginePowerICE;
+
         /// <summary>
         /// Engine power output of MGU-K in watts
         /// </summary>
-        public float enginePowerMGUK;
+        [ObservableProperty]
+        private float _enginePowerMGUK;
+
         /// <summary>
         /// ERS energy store in joules
         /// </summary>
-        public float ersStoreEnergy;
+        [ObservableProperty]
+        private float _ersStoreEnergy;
+
         /// <summary>
         /// <para>ERS deployment mode</para>
         /// <list type="table">
@@ -209,22 +247,63 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte ersDeployMode;
+        [ObservableProperty]
+        private byte _ersDeployMode;
+
         /// <summary>
         /// Energy harvested this lap by the MGU-K
         /// </summary>
-        public float ersHarvestedThisLapMGUK;
+        [ObservableProperty]
+        private float _ersHarvestedThisLapMGUK;
+
         /// <summary>
         /// Energy harvested this lap by the MGU-H
         /// </summary>
-        public float ersHarvestedThisLapMGUH;
+        [ObservableProperty]
+        private float _ersHarvestedThisLapMGUH;
+
         /// <summary>
         /// ERS energy deployed this lap
         /// </summary>
-        public float ersDeployedThisLap;
+        [ObservableProperty]
+        private float _ersDeployedThisLap;
+
         /// <summary>
         /// Whether the car is paused in a network game
         /// </summary>
-        public byte networkPaused;
+        [ObservableProperty]
+        private byte _networkPaused;
+
+        /// <summary>
+        /// Updates the ViewModel with data coming from the corresponding UDP packet
+        /// </summary>
+        /// <param name="data">The data coming from UDP</param>
+        public void Update(CarStatusData data)
+        {
+            TractionControl = data.tractionControl;
+            AntiLockBrakes = data.antiLockBrakes;
+            FuelMix = data.fuelMix;
+            FrontBrakeBias = data.frontBrakeBias;
+            PitLimiterStatus = data.pitLimiterStatus;
+            FuelInTank = data.fuelInTank;
+            FuelCapacity = data.fuelCapacity;
+            MaxRPM = data.maxRPM;
+            IdleRPM = data.idleRPM;
+            MaxGears = data.maxGears;
+            DrsAllowed = data.drsAllowed;
+            DrsActivationDistance = data.drsActivationDistance;
+            ActualTyreCompound = data.actualTyreCompound;
+            VisualTyreCompound = data.visualTyreCompound;
+            TyresAgeLaps = data.tyresAgeLaps;
+            VehicleFiaFlags = data.vehicleFiaFlags;
+            EnginePowerICE = data.enginePowerICE;
+            EnginePowerMGUK = data.enginePowerMGUK;
+            ErsStoreEnergy = data.ersStoreEnergy;
+            ErsDeployMode = data.ersDeployMode;
+            ErsHarvestedThisLapMGUK = data.ersHarvestedThisLapMGUK;
+            ErsHarvestedThisLapMGUH = data.ersHarvestedThisLapMGUH;
+            ErsDeployedThisLap = data.ersDeployedThisLap;
+            NetworkPaused = data.networkPaused;
+        }
     }
 }

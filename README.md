@@ -4,11 +4,13 @@ Receive and parse the telemetry packets from the F1® 23 game, and hopefully fut
 
 Current UDP specification can be found [here](https://answers.ea.com/ea/attachments/ea/f1-23-general-discussion-en/2776/3/Data%20Output%20from%20F1%2023%20v29x3.docx).
 
+Since the specification changed from last year's game, this library is only compatible with F1® 23 for the moment.
+
 ## Usage
 
 ### Enabling telemetry
 
-UDP telemetry must be turned on in your game for this library to work. You can find the telemetry settings in `Options > Settings > Telemetry Settings` (F1 23).
+UDP telemetry must be turned on in your game for this library to work. You can find the telemetry settings in `Options > Settings > Telemetry Settings` (F1® 23).
 
 By default the `UDP Telemetry` option it's off, so you have to turn it on. While you're here you can also change the `UDP Port` setting if needed. The default is `20777`.
 
@@ -43,12 +45,14 @@ private void Client_OnCarTelemetryDataReceive(CarTelemetryPacket packet)
 
 ### Data binding
 
-Coming soon
+I included ViewModels for a few of the data types for making it easier to use in GUI projects (I'm doing one of my own 😉). I'll add a few more if my project gets more interesting and requires more ViewModels.
 
+The ones included for now are:
 
-## Examples
-
-Coming soon
+- Car Damage
+- Car Setup
+- Car Status
+- Car Telemetry
 
 ## Aknowledgements
 

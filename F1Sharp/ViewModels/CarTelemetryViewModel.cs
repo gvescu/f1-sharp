@@ -1,21 +1,23 @@
-﻿using System.Runtime.InteropServices;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using F1Sharp;
+using F1Sharp.Data;
 
-namespace F1Sharp.Data
+namespace F1Sharp.ViewModels
 {
-    /// <summary>
-    /// Car telemetry data
-    /// </summary>
-    [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public struct CarTelemetryData
+    public partial class CarTelemetryViewModel : ObservableObject
     {
         /// <summary>
         /// Speed in kilometers per hour
         /// </summary>
-        public ushort speed;
+        [ObservableProperty]
+        private ushort _speed;
+
         /// <summary>
         /// Amount of throttle applied (0..1)
         /// </summary>
-        public float throttle;
+        [ObservableProperty]
+        private float _throttle;
+
         /// <summary>
         /// <para>Amount of steering applied (-1..1)</para>
         /// <list type="table">
@@ -37,15 +39,21 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public float steer;
+        [ObservableProperty]
+        private float _steer;
+
         /// <summary>
         /// Amount of brake applied (0..1)
         /// </summary>
-        public float brake;
+        [ObservableProperty]
+        private float _brake;
+
         /// <summary>
         /// Amount of clutch applied (0..100)
         /// </summary>
-        public byte clutch;
+        [ObservableProperty]
+        private byte _clutch;
+
         /// <summary>
         /// <para>Gear selected</para>
         /// <list type="table">
@@ -67,11 +75,15 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public sbyte gear;
+        [ObservableProperty]
+        private sbyte _gear;
+
         /// <summary>
         /// Engine RPM
         /// </summary>
-        public ushort engineRPM;
+        [ObservableProperty]
+        private ushort _engineRPM;
+
         /// <summary>
         /// <para>DRS active</para>
         /// <list type="table">
@@ -89,45 +101,81 @@ namespace F1Sharp.Data
         ///     </item>
         /// </list>
         /// </summary>
-        public byte drs;
+        [ObservableProperty]
+        private byte _drs;
+
         /// <summary>
         /// Rev lights indictor (percentage)
         /// </summary>
-        public byte revLightsPercent;
+        [ObservableProperty]
+        private byte _revLightsPercent;
+
         /// <summary>
         /// Rev lights indicator (0-14)
         /// </summary>
-        public ushort revLightsBitValue;
+        [ObservableProperty]
+        private ushort _revLightsBitValue;
+
         /// <summary>
         /// Brakes temperature in celsius
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public ushort[] brakesTemperature;
+        [ObservableProperty]
+        private ushort[] _brakesTemperature;
+
         /// <summary>
         /// Tyres surface temperature in celsius
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public byte[] tyresSurfaceTemperature;
+        [ObservableProperty]
+        private byte[] _tyresSurfaceTemperature;
+
         /// <summary>
         /// Tyres inner temperature in celsius
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public byte[] tyresInnerTemperature;
+        [ObservableProperty]
+        private byte[] _tyresInnerTemperature;
+
         /// <summary>
         /// Engine temperature in celsius
         /// </summary>
-        public ushort engineTemperature;
+        [ObservableProperty]
+        private ushort _engineTemperature;
+
         /// <summary>
         /// Tyres pressure (PSI)
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] tyresPressure;
+        [ObservableProperty]
+        private float[] _tyresPressure;
+
         /// <summary>
         /// <para>Driving surface for each wheel</para>
         /// <para>See <see cref="F1Sharp.SurfaceType"/> for surface types.</para>
         /// <para>See <see cref="Wheel"/> for wheel index.</para>
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public SurfaceType[] surfaceType;
+        [ObservableProperty]
+        private SurfaceType[] surfaceType;
+
+        /// <summary>
+        /// Updates the ViewModel with data coming from the corresponding UDP packet
+        /// </summary>
+        /// <param name="data">The data coming from UDP</param>
+        public void Update(CarTelemetryData data)
+        {
+            Speed = data.speed;
+            Throttle = data.throttle;
+            Steer = data.steer;
+            Brake = data.brake;
+            Clutch = data.clutch;
+            Gear = data.gear;
+            EngineRPM = data.engineRPM;
+            Drs = data.drs;
+            RevLightsPercent = data.revLightsPercent;
+            RevLightsBitValue = data.revLightsBitValue;
+            BrakesTemperature = data.brakesTemperature;
+            TyresSurfaceTemperature = data.tyresSurfaceTemperature;
+            TyresInnerTemperature = data.tyresInnerTemperature;
+            EngineTemperature = data.engineTemperature;
+            TyresPressure = data.tyresPressure;
+            SurfaceType = data.surfaceType;
+        }
     }
 }
