@@ -1,3 +1,5 @@
+![F1Sharp](f1sharp-logo.png)
+
 # F1Sharp
 
 Receive and parse the telemetry packets from the F1® 23 game, and hopefully future ones too.
