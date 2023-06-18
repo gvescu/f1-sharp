@@ -1,4 +1,4 @@
-![F1Sharp](f1sharp-logo.png)
+![F1Sharp](https://raw.githubusercontent.com/gvescu/f1-sharp/main/f1sharp-logo.png)
 
 # F1Sharp
 
@@ -7,6 +7,10 @@ Receive and parse the telemetry packets from the F1® 23 game, and hopefully fut
 Current UDP specification can be found [here](https://answers.ea.com/ea/attachments/ea/f1-23-general-discussion-en/2776/3/Data%20Output%20from%20F1%2023%20v29x3.docx).
 
 Since the specification changed from last year's game, this library is only compatible with F1® 23 for the moment.
+
+# Installing
+
+This package is available on [NuGet](https://www.nuget.org/packages/F1Sharp/) now.
 
 ## Usage
 
