@@ -9,12 +9,15 @@
 	<RepositoryUrl>https://github.com/gvescu/f1-sharp</RepositoryUrl>
 	<Authors>Gustavo Vera Scuderi</Authors>
 	<AssemblyName>F1Sharp</AssemblyName>
-	<VersionPrefix>1.0.1</VersionPrefix>
+	<VersionPrefix>1.1.0</VersionPrefix>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<RepositoryType>git</RepositoryType>
 	<PackageReleaseNotes>
-		- Added logo and README to the package
+		- Added start/stop methods
+		- Added ViewModel exclusive for player related data
+		- Added ViewModels for Session, SessionHistory and LapData packets
+		- Refactor of included ViewModels
 		- Minor bug fixes
 	</PackageReleaseNotes>
 	<PackageIcon>icon.png</PackageIcon>

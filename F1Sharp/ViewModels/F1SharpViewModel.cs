@@ -1,46 +1,93 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace F1Sharp.ViewModels
 {
     public partial class TelemetryViewModel : ObservableObject
     {
-        /// <summary>
-        /// Car damage ViewModel
-        /// </summary>
-        [ObservableProperty]
-        private CarDamageViewModel _carDamageViewModel;
 
         /// <summary>
-        /// Car setup ViewModel
+        /// Player's ViewModel
         /// </summary>
         [ObservableProperty]
-        private CarSetupViewModel _carSetupViewModel;
+        private PlayerViewModel _playerViewModel;
 
         /// <summary>
-        /// Car status ViewModel
+        /// Rival's ViewModel
         /// </summary>
         [ObservableProperty]
-        private CarStatusViewModel _carStatusViewModel;
+        private PlayerViewModel _rivalViewModel;
 
         /// <summary>
-        /// Car telemetry ViewModel
+        /// Session's ViewModel
         /// </summary>
         [ObservableProperty]
-        private CarTelemetryViewModel _carTelemetryViewModel;
+        private SessionViewModel _sessionViewModel;
 
         /// <summary>
-        /// Participant ViewModel
+        /// List of car telemetry ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private ParticipantViewModel _participantViewModel;
+        private List<CarTelemetryViewModel> _lobbyCarTelemetryViewModels;
 
+        /// <summary>
+        /// List of car damage ViewModels from lobby players
+        /// </summary>
+        [ObservableProperty]
+        private List<CarDamageViewModel> _lobbyCarDamageViewModels;
+
+        /// <summary>
+        /// List of car setup ViewModels from lobby players
+        /// </summary>
+        [ObservableProperty]
+        private List<CarSetupViewModel> _lobbyCarSetupViewModels;
+
+        /// <summary>
+        /// List of car status ViewModels from lobby players
+        /// </summary>
+        [ObservableProperty]
+        private List<CarStatusViewModel> _lobbyCarStatusViewModels;
+
+        /// <summary>
+        /// List of participant ViewModels from lobby players
+        /// </summary>
+        [ObservableProperty]
+        private List<ParticipantViewModel> _lobbyParticipantViewModels;
+
+        /// <summary>
+        /// List of lap data ViewModels from lobby players
+        /// </summary>
+        [ObservableProperty]
+        private List<LapDataViewModel> _lobbyLapDataViewModels;
+
+        /// <summary>
+        /// List of session history ViewModels from lobby players
+        /// </summary>
+        [ObservableProperty]
+        private List<SessionHistoryViewModel> _lobbySessionHistoryViewModels;
+
+        /// <summary>
+        /// ViewModel constructor
+        /// </summary>
         public TelemetryViewModel()
         {
-            CarDamageViewModel = new CarDamageViewModel();
-            CarSetupViewModel = new CarSetupViewModel();
-            CarStatusViewModel = new CarStatusViewModel();
-            CarTelemetryViewModel = new CarTelemetryViewModel();
-            ParticipantViewModel = new ParticipantViewModel();
+            PlayerViewModel = new();
+            RivalViewModel = new();
+            SessionViewModel = new();
+            LobbyCarTelemetryViewModels = new();
+            LobbyCarDamageViewModels = new();
+            LobbyCarSetupViewModels = new();
+            LobbyCarStatusViewModels = new();
+            LobbyParticipantViewModels = new();
+            LobbyLapDataViewModels = new();
+            LobbySessionHistoryViewModels = new();
+
+            for (int i = 0; i < 22; i++)
+            {
+                SessionHistoryViewModel sessionHistoryViewModel = new();
+                LobbySessionHistoryViewModels.Add(sessionHistoryViewModel);
+            }
         }
     }
 }

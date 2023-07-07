@@ -14,7 +14,8 @@ namespace F1Sharp.Packets
         /// </summary>
         public PacketHeader header;
         /// <summary>
-        /// Current weather type
+        /// <para>Current weather type.</para>
+        /// <para>See <see cref="F1Sharp.Weather"/> for weather conditions.</para>
         /// </summary>
         public Weather weather;
         /// <summary>
@@ -38,11 +39,13 @@ namespace F1Sharp.Packets
         /// </summary>
         public Session sessionType;
         /// <summary>
-        /// Identifier for the track the session is taking place
+        /// <para>Identifier for the track the session is taking place.</para>
+        /// <para>See <see cref="F1Sharp.Track"/> for track IDs.</para>
         /// </summary>
         public Track trackId;
         /// <summary>
-        /// Type of the cars in the session
+        /// <para>Type of the cars in the session.</para>
+        /// <para>See <see cref="F1Sharp.Formula"/> for the types of cars.</para>
         /// </summary>
         public Formula formula;
         /// <summary>
@@ -79,17 +82,32 @@ namespace F1Sharp.Packets
         /// </summary>
         public byte numMarshalZones;
         /// <summary>
-        /// List of marshal zones
+        /// <para>List of marshal zones.</para>
+        /// <para>See <see cref="MarshalZone"/> for parameters of each zone.</para>
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 21)]
         public MarshalZone[] marshalZones;
         /// <summary>
-        /// Safety car status
+        /// <para>Safety car status</para>
+        /// <para>See <see cref="F1Sharp.SafetyCarStatus"/> for the status values.</para>
         /// </summary>
         public SafetyCarStatus safetyCarStatus;
         /// <summary>
-        /// Indicates if it's a network game.
-        /// 0 = offline; 1 = online
+        /// <para>Indicates if it's a network game</para>
+        /// <list type="table">
+        ///     <listheader>
+        ///         <term>Value</term>
+        ///         <description>Meaning</description>
+        ///     </listheader>
+        ///     <item>
+        ///         <term>0</term>
+        ///         <description>Offline</description>
+        ///     </item>
+        ///     <item>
+        ///         <term>1</term>
+        ///         <description>Online</description>
+        ///     </item>
+        /// </list>
         /// </summary>
         public byte networkGame;
         /// <summary>
@@ -102,8 +120,21 @@ namespace F1Sharp.Packets
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 56)]
         public WeatherForecastSample[] weatherForecastSamples;
         /// <summary>
-        /// Accuracy of the forecast
-        /// 0 = perfect; 1 = approximate
+        /// <para>Accuracy of the forecast</para>
+        /// <list type="table">
+        ///     <listheader>
+        ///         <term>Value</term>
+        ///         <description>Meaning</description>
+        ///     </listheader>
+        ///     <item>
+        ///         <term>0</term>
+        ///         <description>Perfect</description>
+        ///     </item>
+        ///     <item>
+        ///         <term>1</term>
+        ///         <description>Approximate</description>
+        ///     </item>
+        /// </list>
         /// </summary>
         public byte forecastAccuracy;
         /// <summary>
@@ -144,11 +175,13 @@ namespace F1Sharp.Packets
         public byte dynamicRacingLine;
         public byte dynamicRacingLineType;
         /// <summary>
-        /// Current game mode
+        /// <para>Current game mode.</para>
+        /// <para>See <see cref="F1Sharp.GameMode"/> for available game modes.</para>
         /// </summary>
         public GameMode gameMode;
         /// <summary>
-        /// Current rule set
+        /// <para>Current rule set.</para>
+        /// <para>See <see cref="F1Sharp.RuleSet"/> for available rule sets.</para>
         /// </summary>
         public RuleSet ruleSet;
         /// <summary>

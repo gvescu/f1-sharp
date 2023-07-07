@@ -6,6 +6,7 @@ namespace F1Sharp.Packets
     /// <summary>
     /// This packet gives details of events that happen during the course of a session.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct EventPacket
     {
         /// <summary>

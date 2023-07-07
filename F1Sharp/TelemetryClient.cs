@@ -17,7 +17,6 @@ namespace F1Sharp
         private readonly UdpClient _client;
         private IPEndPoint _peerEndPoint;
         private Timer _timeoutTimer;
-        private readonly int _mode;
 
         /// <summary>
         /// Indicates if we're currently connected
@@ -71,19 +70,16 @@ namespace F1Sharp
         /// Constructs client and sets it up for receiving data
         /// </summary>
         /// <param name="port">The port to listen to. This must match your game setting.</param>
-        /// <param name="mode">F1 22 or 23. 23 by default.</param>
-        public TelemetryClient(int port, int mode = 23)
+        public TelemetryClient(int port)
         {
             _client = new UdpClient(port);
             _peerEndPoint = new IPEndPoint(IPAddress.Any, port);
-            _mode = mode;
 
             _timeoutTimer = new Timer(TIMEOUT)
             {
                 AutoReset = true
             };
             _timeoutTimer.Elapsed += TimeoutEvent;
-
 
             _client.BeginReceive(new AsyncCallback(ReceiveCallback), null);
         }
