@@ -64,6 +64,10 @@ The ones included for now are:
 
 Thanks a lot to [@thomz](https://github.com/thomz12) for coding the [library](https://github.com/thomz12/F12020-Telemetry) that inspired this one.
 
+## Help
+
+<a href="https://www.buymeacoffee.com/gvescu"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=gvescu&button_colour=ff0000&font_colour=ffffff&font_family=Bree&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
+
 ## Legal notice
 F1® 23 Game - an official product of the FIA Formula One World Championship™.
 
