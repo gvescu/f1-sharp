@@ -14,9 +14,10 @@ namespace F1Sharp
         /// </summary>
         private const float TIMEOUT = 500.0f;
 
-        private readonly UdpClient _client;
+        private UdpClient _client;
         private IPEndPoint _peerEndPoint;
         private Timer _timeoutTimer;
+        private GCHandle _handle;
 
         /// <summary>
         /// Indicates if we're currently connected
@@ -81,7 +82,24 @@ namespace F1Sharp
             };
             _timeoutTimer.Elapsed += TimeoutEvent;
 
+            Connected = true;
+            OnConnectedStatusChange?.Invoke(true);
+
             _client.BeginReceive(new AsyncCallback(ReceiveCallback), null);
+        }
+
+        public void Stop()
+        {
+            Connected = false;
+            OnConnectedStatusChange?.Invoke(false);
+
+            _client.Close();
+            _client = null;
+
+            if (_handle.IsAllocated)
+            {
+                _handle.Free();
+            }
         }
 
         /// <summary>
@@ -102,87 +120,86 @@ namespace F1Sharp
         /// <exception cref="Exception">Something went wrong</exception>
         private void ReceiveCallback(IAsyncResult result)
         {
-            if (Connected == false)
-            {
-                Connected = true;
-                OnConnectedStatusChange?.Invoke(true);
-            }
-
-            byte[] data = _client.EndReceive(result, ref _peerEndPoint);
-
-            _client.BeginReceive(new AsyncCallback(ReceiveCallback), null);
-
-            GCHandle handle = GCHandle.Alloc(data, GCHandleType.Pinned);
-
             try
             {
-                PacketHeader header = (PacketHeader)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(PacketHeader));
+                byte[] data = _client.EndReceive(result, ref _peerEndPoint);
+
+                _handle = GCHandle.Alloc(data, GCHandleType.Pinned);
+
+                PacketHeader header = (PacketHeader)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(PacketHeader));
 
                 switch (header.packetId)
                 {
                     case Packet.MOTION:
-                        MotionPacket motionPacket = (MotionPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(MotionPacket));
+                        MotionPacket motionPacket = (MotionPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(MotionPacket));
                         OnMotionDataReceive?.Invoke(motionPacket);
                         break;
                     case Packet.LAP_DATA:
-                        LapDataPacket lapDataPacket = (LapDataPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(LapDataPacket));
+                        LapDataPacket lapDataPacket = (LapDataPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(LapDataPacket));
                         OnLapDataReceive?.Invoke(lapDataPacket);
                         break;
                     case Packet.EVENT:
-                        EventPacket eventPacket = (EventPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(EventPacket));
+                        EventPacket eventPacket = (EventPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(EventPacket));
                         OnEventDetailsReceive?.Invoke(eventPacket);
                         break;
                     case Packet.SESSION:
-                        SessionPacket sessionPacket = (SessionPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(SessionPacket));
+                        SessionPacket sessionPacket = (SessionPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(SessionPacket));
                         OnSessionDataReceive?.Invoke(sessionPacket);
                         break;
                     case Packet.PARTICIPANTS:
-                        ParticipantsPacket participantsPacket = (ParticipantsPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(ParticipantsPacket));
+                        ParticipantsPacket participantsPacket = (ParticipantsPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(ParticipantsPacket));
                         OnParticipantsDataReceive?.Invoke(participantsPacket);
                         break;
                     case Packet.CAR_SETUPS:
-                        CarSetupPacket carSetupPacket = (CarSetupPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(CarSetupPacket));
+                        CarSetupPacket carSetupPacket = (CarSetupPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(CarSetupPacket));
                         OnCarSetupDataReceive?.Invoke(carSetupPacket);
                         break;
                     case Packet.CAR_TELEMETRY:
-                        CarTelemetryPacket carTelemetryPacket = (CarTelemetryPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(CarTelemetryPacket));
+                        CarTelemetryPacket carTelemetryPacket = (CarTelemetryPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(CarTelemetryPacket));
                         OnCarTelemetryDataReceive?.Invoke(carTelemetryPacket);
                         break;
                     case Packet.CAR_STATUS:
-                        CarStatusPacket carStatusPacket = (CarStatusPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(CarStatusPacket));
+                        CarStatusPacket carStatusPacket = (CarStatusPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(CarStatusPacket));
                         OnCarStatusDataReceive?.Invoke(carStatusPacket);
                         break;
                     case Packet.FINAL_CLASSIFICATION:
-                        FinalClassificationPacket finalClassificationPacket = (FinalClassificationPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(FinalClassificationPacket));
+                        FinalClassificationPacket finalClassificationPacket = (FinalClassificationPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(FinalClassificationPacket));
                         OnFinalClassificationDataReceive?.Invoke(finalClassificationPacket);
                         break;
                     case Packet.LOBBY_INFO:
-                        LobbyInfoPacket lobbyInfoPacket = (LobbyInfoPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(LobbyInfoPacket));
+                        LobbyInfoPacket lobbyInfoPacket = (LobbyInfoPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(LobbyInfoPacket));
                         OnLobbyInfoDataReceive?.Invoke(lobbyInfoPacket);
                         break;
                     case Packet.CAR_DAMAGE:
-                        CarDamagePacket carDamagePacket = (CarDamagePacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(CarDamagePacket));
+                        CarDamagePacket carDamagePacket = (CarDamagePacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(CarDamagePacket));
                         OnCarDamageDataReceive?.Invoke(carDamagePacket);
                         break;
                     case Packet.SESSION_HISTORY:
-                        SessionHistoryPacket sessionHistoryPacket = (SessionHistoryPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(SessionHistoryPacket));
+                        SessionHistoryPacket sessionHistoryPacket = (SessionHistoryPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(SessionHistoryPacket));
                         OnSessionHistoryDataReceive?.Invoke(sessionHistoryPacket);
                         break;
                     case Packet.TYRE_SET:
-                        TyreSetPacket tyreSetPacket = (TyreSetPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(TyreSetPacket));
+                        TyreSetPacket tyreSetPacket = (TyreSetPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(TyreSetPacket));
                         OnTyreSetDataReceive?.Invoke(tyreSetPacket);
                         break;
                     case Packet.MOTION_EX:
-                        MotionExPacket motionExPacket = (MotionExPacket)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), typeof(MotionExPacket));
+                        MotionExPacket motionExPacket = (MotionExPacket)Marshal.PtrToStructure(_handle.AddrOfPinnedObject(), typeof(MotionExPacket));
                         OnMotionExDataReceive?.Invoke(motionExPacket);
                         break;
                 }
             }
             catch
             {
-                throw new Exception("Failed to receive F1 telemetry data");
+                // Ignore
             }
-            finally { handle.Free(); }
+            finally {
+                if (_handle.IsAllocated)
+                {
+                    _handle.Free();
+                }
+
+                _client?.BeginReceive(new AsyncCallback(ReceiveCallback), null);
+            }
         }
     }
 }

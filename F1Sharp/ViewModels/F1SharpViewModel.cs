@@ -8,6 +8,12 @@ namespace F1Sharp.ViewModels
     {
 
         /// <summary>
+        /// Client's port
+        /// </summary>
+        [ObservableProperty]
+        private int _port;
+
+        /// <summary>
         /// Player's ViewModel
         /// </summary>
         [ObservableProperty]
@@ -72,6 +78,7 @@ namespace F1Sharp.ViewModels
         /// </summary>
         public TelemetryViewModel()
         {
+            Port = 20777;
             PlayerViewModel = new();
             RivalViewModel = new();
             SessionViewModel = new();

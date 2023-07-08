@@ -2,11 +2,11 @@
 
 # F1Sharp
 
-Receive and parse the telemetry packets from the F1® 23 game, and hopefully future ones too.
+Receive and parse the telemetry packets from the F1® 23 game.
 
-Current UDP specification can be found [here](https://answers.ea.com/ea/attachments/ea/f1-23-general-discussion-en/2776/3/Data%20Output%20from%20F1%2023%20v29x3.docx).
+Current UDP specification can be found [here](https://answers.ea.com/t5/General-Discussion/F1-23-UDP-Specification/td-p/12632888).
 
-Since the specification changed from last year's game, this library is only compatible with F1® 23 for the moment.
+Since the specification changes every year and for scope reasons, this library is only compatible with F1® 23.
 
 # Installing
 
@@ -51,7 +51,7 @@ private void Client_OnCarTelemetryDataReceive(CarTelemetryPacket packet)
 
 ### Data binding
 
-I included ViewModels for a few of the data types for making it easier to use in GUI projects (I'm doing one of my own 😉). I'll add a few more if my project gets more interesting and requires more ViewModels.
+There are ViewModels included for a few of the data types for making it easier to use in GUI projects (I'm doing one of my own 😉). I'll add a few more if my project gets more interesting and requires more ViewModels.
 
 The ones included for now are:
 
