@@ -1,10 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using F1Sharp.Packets;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class SessionHistoryViewModel : ObservableObject
+    public partial class SessionHistory : ObservableObject
     {
         [ObservableProperty]
         private PacketHeader _header;
@@ -31,12 +32,12 @@ namespace F1Sharp.ViewModels
         private byte _bestSector3LapNum;
 
         [ObservableProperty]
-        private List<LapHistoryViewModel> _lapHistory;
+        private ObservableCollection<LapHistory> _lapHistoryData;
 
         [ObservableProperty]
-        private List<TyreStintHistoryViewModel> _tyreHistory;
+        private ObservableCollection<TyreStintHistory> _tyreHistoryData;
 
-        public void Update(SessionHistoryPacket packet, List<LapHistoryViewModel> lapHistoryData, List<TyreStintHistoryViewModel> tyreStintHistoryData)
+        public void Update(SessionHistoryPacket packet, ObservableCollection<LapHistory> lapHistoryData, ObservableCollection<TyreStintHistory> tyreStintHistoryData)
         {
             Header = packet.header;
             CarIdx = packet.carIdx;
@@ -46,14 +47,14 @@ namespace F1Sharp.ViewModels
             BestSector1LapNum = packet.bestSector1Lapnum;
             BestSector2LapNum = packet.bestSector2Lapnum;
             BestSector3LapNum = packet.bestSector3Lapnum;
-            LapHistory = lapHistoryData;
-            TyreHistory = tyreStintHistoryData;
+            LapHistoryData = lapHistoryData;
+            TyreHistoryData = tyreStintHistoryData;
         }
 
-        public SessionHistoryViewModel()
+        public SessionHistory()
         {
-            LapHistory = new();
-            TyreHistory = new();
+            LapHistoryData = new();
+            TyreHistoryData = new();
         }
     }
 }

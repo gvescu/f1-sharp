@@ -4,7 +4,7 @@ using F1Sharp.Data;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class CarTelemetryViewModel : ObservableObject
+    public partial class CarTelemetry : ObservableObject
     {
         /// <summary>
         /// Speed in kilometers per hour

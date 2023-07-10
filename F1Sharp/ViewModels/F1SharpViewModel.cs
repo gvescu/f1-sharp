@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class TelemetryViewModel : ObservableObject
+    public partial class UDPTelemetry : ObservableObject
     {
 
         /// <summary>
@@ -14,87 +14,95 @@ namespace F1Sharp.ViewModels
         private int _port;
 
         /// <summary>
+        /// Number of active cars
+        /// </summary>
+        [ObservableProperty]
+        private int _numActiveCars;
+
+        /// <summary>
         /// Player's ViewModel
         /// </summary>
         [ObservableProperty]
-        private PlayerViewModel _playerViewModel;
+        private Player _player;
 
         /// <summary>
         /// Rival's ViewModel
         /// </summary>
         [ObservableProperty]
-        private PlayerViewModel _rivalViewModel;
+        private Player _rival;
 
         /// <summary>
         /// Session's ViewModel
         /// </summary>
         [ObservableProperty]
-        private SessionViewModel _sessionViewModel;
+        private Session _session;
 
         /// <summary>
         /// List of car telemetry ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<CarTelemetryViewModel> _lobbyCarTelemetryViewModels;
+        private ObservableCollection<CarTelemetry> _lobbyCarTelemetry;
 
         /// <summary>
         /// List of car damage ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<CarDamageViewModel> _lobbyCarDamageViewModels;
+        private ObservableCollection<CarDamage> _lobbyCarDamage;
 
         /// <summary>
         /// List of car setup ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<CarSetupViewModel> _lobbyCarSetupViewModels;
+        private ObservableCollection<CarSetup> _lobbyCarSetup;
 
         /// <summary>
         /// List of car status ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<CarStatusViewModel> _lobbyCarStatusViewModels;
+        private ObservableCollection<CarStatus> _lobbyCarStatus;
 
         /// <summary>
         /// List of participant ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<ParticipantViewModel> _lobbyParticipantViewModels;
+        private ObservableCollection<Participants> _lobbyParticipants;
 
         /// <summary>
         /// List of lap data ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<LapDataViewModel> _lobbyLapDataViewModels;
+        private ObservableCollection<LapData> _lobbyLapData;
 
         /// <summary>
         /// List of session history ViewModels from lobby players
         /// </summary>
         [ObservableProperty]
-        private List<SessionHistoryViewModel> _lobbySessionHistoryViewModels;
+        private ObservableCollection<SessionHistory> _lobbySessionHistory;
+
+        /// <summary>
+        /// Timing table
+        /// </summary>
+        [ObservableProperty]
+        private ObservableCollection<TimingRow> _timingTable;
 
         /// <summary>
         /// ViewModel constructor
         /// </summary>
-        public TelemetryViewModel()
+        public UDPTelemetry()
         {
             Port = 20777;
-            PlayerViewModel = new();
-            RivalViewModel = new();
-            SessionViewModel = new();
-            LobbyCarTelemetryViewModels = new();
-            LobbyCarDamageViewModels = new();
-            LobbyCarSetupViewModels = new();
-            LobbyCarStatusViewModels = new();
-            LobbyParticipantViewModels = new();
-            LobbyLapDataViewModels = new();
-            LobbySessionHistoryViewModels = new();
-
-            for (int i = 0; i < 22; i++)
-            {
-                SessionHistoryViewModel sessionHistoryViewModel = new();
-                LobbySessionHistoryViewModels.Add(sessionHistoryViewModel);
-            }
+            NumActiveCars = 0;
+            Player = new();
+            Rival = new();
+            Session = new();
+            LobbyCarTelemetry = new();
+            LobbyCarDamage = new();
+            LobbyCarSetup = new();
+            LobbyCarStatus = new();
+            LobbyParticipants = new();
+            LobbyLapData = new();
+            LobbySessionHistory = new();
+            TimingTable = new();
         }
     }
 }

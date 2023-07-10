@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class LapDataViewModel : ObservableObject
+    public partial class LapData : ObservableObject
     {
         [ObservableProperty]
         private uint _lastLapTimeInMS;
@@ -22,7 +22,7 @@ namespace F1Sharp.ViewModels
         private ushort _sector2TimeInMS;
 
         [ObservableProperty]
-        private ushort _sector2TimeInMinutes;
+        private byte _sector2TimeInMinutes;
 
         [ObservableProperty]
         private ushort _deltaToCarInFrontInMS;
@@ -47,6 +47,9 @@ namespace F1Sharp.ViewModels
 
         [ObservableProperty]
         private PitStatus _pitStatus;
+
+        [ObservableProperty]
+        private byte _numPitStops;
 
         [ObservableProperty]
         private Sector _sector;
@@ -90,7 +93,7 @@ namespace F1Sharp.ViewModels
         [ObservableProperty]
         private byte _pitStopShouldServePen;
 
-        public void Update(LapData data)
+        public void Update(Data.LapData data)
         {
             LastLapTimeInMS = data.lastLapTimeInMS;
             CurrentLapTimeInMS = data.currentLapTimeInMS;
@@ -106,6 +109,7 @@ namespace F1Sharp.ViewModels
             CarPosition = data.carPosition;
             CurrentLapNum = data.currentLapNum;
             PitStatus = data.pitStatus;
+            NumPitStops = data.numPitStops;
             Sector = data.sector;
             CurrentLapInvalid = data.currentLapInvalid;
             Penalties = data.penalties;

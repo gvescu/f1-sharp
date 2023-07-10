@@ -2,39 +2,39 @@
 
 namespace F1Sharp.ViewModels
 {
-    public partial class PlayerViewModel : ObservableObject
+    public partial class Player : ObservableObject
     {
         /// <summary>
         /// Player's car telemetry
         /// </summary>
         [ObservableProperty]
-        private CarTelemetryViewModel _carTelemetry;
+        private CarTelemetry _carTelemetry;
 
         /// <summary>
         /// Player's car status
         /// </summary>
         [ObservableProperty]
-        private CarStatusViewModel _carStatus;
+        private CarStatus _carStatus;
 
         /// <summary>
         /// Player's car setup
         /// </summary>
         [ObservableProperty]
-        private CarSetupViewModel _carSetup;
+        private CarSetup _carSetup;
 
         /// <summary>
         /// Player's car damage
         /// </summary>
         [ObservableProperty]
-        private CarDamageViewModel _carDamage;
+        private CarDamage _carDamage;
 
         /// <summary>
         /// Player's lap data
         /// </summary>
         [ObservableProperty]
-        private LapDataViewModel _lapData;
+        private LapData _lapData;
 
-        public PlayerViewModel()
+        public Player()
         {
             CarTelemetry = new();
             CarStatus = new();

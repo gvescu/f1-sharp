@@ -497,7 +497,7 @@
     /// <summary>
     /// Identifier for the pit status
     /// </summary>
-    public enum PitStatus
+    public enum PitStatus : byte
     {
         /// <summary>
         /// Not in the pits

@@ -3,7 +3,7 @@ using F1Sharp.Data;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class ParticipantViewModel : ObservableObject
+    public partial class Participants : ObservableObject
     {
         /// <summary>
         /// Whether the car is controlled by the AI (1) or the human (0)

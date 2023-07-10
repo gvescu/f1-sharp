@@ -5,7 +5,7 @@ using F1Sharp.Packets;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class SessionViewModel : ObservableObject
+    public partial class Session : ObservableObject
     {
         /// <summary>
         /// Packet header
@@ -48,7 +48,7 @@ namespace F1Sharp.ViewModels
         /// Type of the session
         /// </summary>
         [ObservableProperty]
-        private Session _sessionType;
+        private F1Sharp.Session _sessionType;
 
         /// <summary>
         /// <para>Identifier for the track the session is taking place.</para>

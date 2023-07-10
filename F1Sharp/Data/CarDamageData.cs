@@ -101,6 +101,10 @@ namespace F1Sharp.Data
         /// </summary>
         public byte engineESWear;
         /// <summary>
+        /// Engine wear CE (percentage)
+        /// </summary>
+        public byte engineCEWear;
+        /// <summary>
         /// Engine wear ICE (percentage)
         /// </summary>
         public byte engineICEWear;

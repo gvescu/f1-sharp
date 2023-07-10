@@ -9,15 +9,12 @@
 	<RepositoryUrl>https://github.com/gvescu/f1-sharp</RepositoryUrl>
 	<Authors>Gustavo Vera Scuderi</Authors>
 	<AssemblyName>F1Sharp</AssemblyName>
-	<VersionPrefix>1.1.1</VersionPrefix>
+	<VersionPrefix>1.2.0</VersionPrefix>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<RepositoryType>git</RepositoryType>
 	<PackageReleaseNotes>
-		- Added Stop method for releasing the listening port
-		- Added ViewModel exclusive for player related data
-		- Added ViewModels for Session, SessionHistory and LapData packets
-		- Added documentation
+		- Fixed an issue with CarDamage and LapData parsing
 		- Refactor of included ViewModels
 		- Bug fixes
 	</PackageReleaseNotes>

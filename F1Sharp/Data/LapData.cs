@@ -31,7 +31,7 @@ namespace F1Sharp.Data
         /// <summary>
         /// Sector 2 whole minute part
         /// </summary>
-        public ushort sector2TimeMinutes;
+        public byte sector2TimeMinutes;
         /// <summary>
         /// Time delta to car in front in milliseconds
         /// </summary>
@@ -66,6 +66,10 @@ namespace F1Sharp.Data
         /// Pit status of the car
         /// </summary>
         public PitStatus pitStatus;
+        /// <summary>
+        /// Number of pit stops taken in this race
+        /// </summary>
+        public byte numPitStops;
         /// <summary>
         /// Sector the car is in
         /// </summary>

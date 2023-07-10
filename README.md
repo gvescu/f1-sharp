@@ -51,20 +51,27 @@ private void Client_OnCarTelemetryDataReceive(CarTelemetryPacket packet)
 
 ### Data binding
 
-There are ViewModels included for a few of the data types for making it easier to use in GUI projects (I'm doing one of my own 😉). I'll add a few more if my project gets more interesting and requires more ViewModels.
+There are ViewModels included for a few of the data types for making it easier to use in GUI projects.
 
-The ones included for now are:
+The ones included for now are for the following packets:
 
 - Car Damage
 - Car Setup
 - Car Status
 - Car Telemetry
+- Lap Data
+- Participants
+- Session
+
+Plus a global `UDPTelemetry` ViewModel for grouping all of them.
+
+Example coming soon.
 
 ## Aknowledgements
 
 Thanks a lot to [@thomz](https://github.com/thomz12) for coding the [library](https://github.com/thomz12/F12020-Telemetry) that inspired this one.
 
-## Help
+## Support
 
 <a href="https://www.buymeacoffee.com/gvescu"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=gvescu&button_colour=ff0000&font_colour=ffffff&font_family=Bree&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
 

@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class CarDamageViewModel : ObservableObject
+    public partial class CarDamage : ObservableObject
     {
         /// <summary>
         /// Tyre wear (percentage)
@@ -124,6 +124,12 @@ namespace F1Sharp.ViewModels
         private byte _engineESWear;
 
         /// <summary>
+        /// Engine wear CE (percentage)
+        /// </summary>
+        [ObservableProperty]
+        private byte _engineCEWear;
+
+        /// <summary>
         /// Engine wear ICE (percentage)
         /// </summary>
         [ObservableProperty]
@@ -202,6 +208,7 @@ namespace F1Sharp.ViewModels
             EngineDamage = data.engineDamage;
             EngineMGUHWear = data.engineMGUHWear;
             EngineESWear = data.engineESWear;
+            EngineCEWear = data.engineCEWear;
             EngineICEWear = data.engineICEWear;
             EngineMGUKWear = data.engineMGUKWear;
             EngineTCWear = data.engineTCWear;

@@ -3,7 +3,7 @@ using F1Sharp.Data;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class LapHistoryViewModel : ObservableObject
+    public partial class LapHistory : ObservableObject
     {
         [ObservableProperty]
         private uint _lapTimeInMS;
@@ -42,7 +42,7 @@ namespace F1Sharp.ViewModels
         }
     }
 
-    public partial class TyreStintHistoryViewModel : ObservableObject
+    public partial class TyreStintHistory : ObservableObject
     {
         [ObservableProperty]
         private byte _endLap;

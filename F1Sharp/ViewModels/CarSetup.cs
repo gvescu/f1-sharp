@@ -3,7 +3,7 @@ using F1Sharp.Data;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class CarSetupViewModel : ObservableObject
+    public partial class CarSetup : ObservableObject
     {
         /// <summary>
         /// Front wing aero

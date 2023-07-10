@@ -4,7 +4,7 @@ using F1Sharp.Data;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class CarStatusViewModel : ObservableObject
+    public partial class CarStatus : ObservableObject
     {
         /// <summary>
         /// <para>Traction control level</para>
