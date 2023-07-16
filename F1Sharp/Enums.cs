@@ -778,4 +778,381 @@
         F2_MEDIUM = 21,
         F2_HARD = 22
     }
+
+    /// <summary>
+    /// Nationalities in <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO-3166-2 country codes</a>
+    /// </summary>
+    public enum Nationality : byte
+    {
+        /// <summary>
+        /// Other
+        /// </summary>
+        OTHER = 0,
+        /// <summary>
+        /// America
+        /// </summary>
+        US = 1,
+        /// <summary>
+        /// Argentina
+        /// </summary>
+        AR = 2,
+        /// <summary>
+        /// Australia
+        /// </summary>
+        AU = 3,
+        /// <summary>
+        /// Austria
+        /// </summary>
+        AT = 4,
+        /// <summary>
+        /// Azerbaijan
+        /// </summary>
+        AZ = 5,
+        /// <summary>
+        /// Bahrain
+        /// </summary>
+        BH = 6,
+        /// <summary>
+        /// Belgium
+        /// </summary>
+        BE = 7,
+        /// <summary>
+        /// Bolivia
+        /// </summary>
+        BO = 8,
+        /// <summary>
+        /// Brazil
+        /// </summary>
+        BR = 9,
+        /// <summary>
+        /// Great Britain
+        /// </summary>
+        GR = 10,
+        /// <summary>
+        /// Bulgaria
+        /// </summary>
+        BG = 11,
+        /// <summary>
+        /// Cameroon
+        /// </summary>
+        CM = 12,
+        /// <summary>
+        /// Canada
+        /// </summary>
+        CA = 13,
+        /// <summary>
+        /// Chile
+        /// </summary>
+        CL = 14,
+        /// <summary>
+        /// China
+        /// </summary>
+        CN = 15,
+        /// <summary>
+        /// Colombia
+        /// </summary>
+        CO = 16,
+        /// <summary>
+        /// Costa Rica
+        /// </summary>
+        CR = 17,
+        /// <summary>
+        /// Croatia
+        /// </summary>
+        HR = 18,
+        /// <summary>
+        /// Cyprus
+        /// </summary>
+        CY = 19,
+        /// <summary>
+        /// Czech Republic
+        /// </summary>
+        CZ = 20,
+        /// <summary>
+        /// Denmark
+        /// </summary>
+        DK = 21,
+        /// <summary>
+        /// Netherlands
+        /// </summary>
+        NL = 22,
+        /// <summary>
+        /// Ecuador
+        /// </summary>
+        EC = 23,
+        /// <summary>
+        /// England
+        /// </summary>
+        GB_ENG = 24,
+        /// <summary>
+        /// United Arab Emirates
+        /// </summary>
+        AE = 25,
+        /// <summary>
+        /// Estonia
+        /// </summary>
+        EE = 26,
+        /// <summary>
+        /// Finland
+        /// </summary>
+        FI = 27,
+        /// <summary>
+        /// France
+        /// </summary>
+        FR = 28,
+        /// <summary>
+        /// Germany
+        /// </summary>
+        DE = 29,
+        /// <summary>
+        /// Ghana
+        /// </summary>
+        GH = 30,
+        /// <summary>
+        /// Greece
+        /// </summary>
+        GK = 31,
+        /// <summary>
+        /// Guatemala
+        /// </summary>
+        GT = 32,
+        /// <summary>
+        /// Honduras
+        /// </summary>
+        HN = 33,
+        /// <summary>
+        /// Hong Kong
+        /// </summary>
+        HK = 34,
+        /// <summary>
+        /// Hungary
+        /// </summary>
+        HU = 35,
+        /// <summary>
+        /// Iceland
+        /// </summary>
+        IS = 36,
+        /// <summary>
+        /// India
+        /// </summary>
+        IN = 37,
+        /// <summary>
+        /// Indonesia
+        /// </summary>
+        ID = 38,
+        /// <summary>
+        /// Ireland
+        /// </summary>
+        IE = 39,
+        /// <summary>
+        /// Israel
+        /// </summary>
+        IL = 40,
+        /// <summary>
+        /// Italia
+        /// </summary>
+        IT = 41,
+        /// <summary>
+        /// Jamaica
+        /// </summary>
+        JM = 42,
+        /// <summary>
+        /// Japan
+        /// </summary>
+        JP = 43,
+        /// <summary>
+        /// Jordan
+        /// </summary>
+        JO = 44,
+        /// <summary>
+        /// Kuwait
+        /// </summary>
+        KW = 45,
+        /// <summary>
+        /// Latvia
+        /// </summary>
+        LV = 46,
+        /// <summary>
+        /// Lebanon
+        /// </summary>
+        LB = 47,
+        /// <summary>
+        /// Lithuania
+        /// </summary>
+        LT = 48,
+        /// <summary>
+        /// Luxembourg
+        /// </summary>
+        LU = 49,
+        /// <summary>
+        /// Malaysia
+        /// </summary>
+        MY = 50,
+        /// <summary>
+        /// Malta
+        /// </summary>
+        MT = 51,
+        /// <summary>
+        /// Mexico
+        /// </summary>
+        MX = 52,
+        /// <summary>
+        /// Monaco
+        /// </summary>
+        MC = 53,
+        /// <summary>
+        /// New Zealand
+        /// </summary>
+        NZ = 54,
+        /// <summary>
+        /// Nicaragua
+        /// </summary>
+        NI = 55,
+        /// <summary>
+        /// Nothern Ireland
+        /// </summary>
+        GB_NIR = 56,
+        /// <summary>
+        /// Norway
+        /// </summary>
+        NO = 57,
+        /// <summary>
+        /// Oman
+        /// </summary>
+        OM = 58,
+        /// <summary>
+        /// Pakistan
+        /// </summary>
+        PK = 59,
+        /// <summary>
+        /// Panama
+        /// </summary>
+        PA = 60,
+        /// <summary>
+        /// Paraguay
+        /// </summary>
+        PY = 61,
+        /// <summary>
+        /// Peru
+        /// </summary>
+        PE = 62,
+        /// <summary>
+        /// Poland
+        /// </summary>
+        PL = 63,
+        /// <summary>
+        /// Portugal
+        /// </summary>
+        PT = 64,
+        /// <summary>
+        /// Qatar
+        /// </summary>
+        QA = 65,
+        /// <summary>
+        /// Romania
+        /// </summary>
+        RO = 66,
+        /// <summary>
+        /// Russia
+        /// </summary>
+        RU = 67,
+        /// <summary>
+        /// El Salvador
+        /// </summary>
+        SV = 68,
+        /// <summary>
+        /// Saudi Arabia
+        /// </summary>
+        SA = 69,
+        /// <summary>
+        /// Scotland
+        /// </summary>
+        GB_SCT = 70,
+        /// <summary>
+        /// Serbia
+        /// </summary>
+        RS = 71,
+        /// <summary>
+        /// Singapore
+        /// </summary>
+        SG = 72,
+        /// <summary>
+        /// Slovakia
+        /// </summary>
+        SK = 73,
+        /// <summary>
+        /// Slovenia
+        /// </summary>
+        SI = 74,
+        /// <summary>
+        /// South Korea
+        /// </summary>
+        KR = 75,
+        /// <summary>
+        /// South Africa
+        /// </summary>
+        ZA = 76,
+        /// <summary>
+        /// Spain
+        /// </summary>
+        ES = 77,
+        /// <summary>
+        /// Sweden
+        /// </summary>
+        SE = 78,
+        /// <summary>
+        /// Switzerland
+        /// </summary>
+        CH = 79,
+        /// <summary>
+        /// Thailand
+        /// </summary>
+        TH = 80,
+        /// <summary>
+        /// Türkiye
+        /// </summary>
+        TR = 81,
+        /// <summary>
+        /// Uruguay
+        /// </summary>
+        UY = 82,
+        /// <summary>
+        /// Ukraine
+        /// </summary>
+        UA = 83,
+        /// <summary>
+        /// Venezuela
+        /// </summary>
+        VE = 84,
+        /// <summary>
+        /// Barbados
+        /// </summary>
+        BB = 85,
+        /// <summary>
+        /// Wales
+        /// </summary>
+        GB_WLS = 86,
+        /// <summary>
+        /// Vietnam
+        /// </summary>
+        VN = 87
+    }
+
+    /// <summary>
+    /// Team IDs. Only including official teams plus the custom car. Check the <a href="https://answers.ea.com/t5/General-Discussion/F1-23-UDP-Specification/td-p/12632888">specification</a> for the other IDs.
+    /// </summary>
+    public enum Team : byte
+    {
+        MERCEDES = 0,
+        FERRARI = 1,
+        REDBULL = 2,
+        WILLIAMS = 3,
+        ASTONMARTIN = 4,
+        ALPINE = 5,
+        ALPHATAURI = 6,
+        HAAS = 7,
+        MCLAREN = 8,
+        ALFAROMEO = 9,
+        F1WORLD = 104
+    }
 }

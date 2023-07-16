@@ -21,9 +21,10 @@ namespace F1Sharp.Data
         /// </summary>
         public byte networkId;
         /// <summary>
-        /// Team ID
+        /// <para>Team ID</para>
+        /// <para>See <see cref="Team"/> for the list of teams.</para>
         /// </summary>
-        public byte teamId;
+        public Team teamId;
         /// <summary>
         /// Whether it's My Team (1) or otherwise (0)
         /// </summary>
@@ -33,9 +34,10 @@ namespace F1Sharp.Data
         /// </summary>
         public byte raceNumber;
         /// <summary>
-        /// Nationality of the driver
+        /// <para>Nationality of the driver </para>
+        /// <para>See <see cref="Nationality"/> for the list of nationalities.</para>
         /// </summary>
-        public byte nationality;
+        public Nationality nationality;
         /// <summary>
         /// Name of the participant
         /// </summary>

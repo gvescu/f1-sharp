@@ -9,12 +9,13 @@
 	<RepositoryUrl>https://github.com/gvescu/f1-sharp</RepositoryUrl>
 	<Authors>Gustavo Vera Scuderi</Authors>
 	<AssemblyName>F1Sharp</AssemblyName>
-	<VersionPrefix>1.2.0</VersionPrefix>
+	<VersionPrefix>1.3.0</VersionPrefix>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<RepositoryType>git</RepositoryType>
 	<PackageReleaseNotes>
-		- Fixed an issue with CarDamage and LapData parsing
+		- Improved performance of the Timing Table
+		- Added enums for Teams and Nationalities
 		- Refactor of included ViewModels
 		- Bug fixes
 	</PackageReleaseNotes>

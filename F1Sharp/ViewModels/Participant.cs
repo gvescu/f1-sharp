@@ -1,9 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using F1Sharp.Data;
+using System;
+using System.Text;
 
 namespace F1Sharp.ViewModels
 {
-    public partial class Participants : ObservableObject
+    public partial class Participant : ObservableObject
     {
         /// <summary>
         /// Whether the car is controlled by the AI (1) or the human (0)
@@ -24,10 +26,11 @@ namespace F1Sharp.ViewModels
         private byte _networkId;
 
         /// <summary>
-        /// Team ID
+        /// <para>Team ID</para>
+        /// <para>See <see cref="Team"/> for the list of teams.</para>
         /// </summary>
         [ObservableProperty]
-        private byte _teamId;
+        private Team _teamId;
 
         /// <summary>
         /// Whether it's My Team (1) or otherwise (0)
@@ -42,10 +45,11 @@ namespace F1Sharp.ViewModels
         private byte _raceNumber;
 
         /// <summary>
-        /// Nationality of the driver
+        /// <para>Nationality of the driver </para>
+        /// <para>See <see cref="F1Sharp.Nationality"/> for the list of nationalities.</para>
         /// </summary>
         [ObservableProperty]
-        private byte _nationality;
+        private Nationality _nationality;
 
         /// <summary>
         /// Name of the participant
@@ -117,7 +121,8 @@ namespace F1Sharp.ViewModels
             MyTeam = data.myTeam;
             RaceNumber = data.raceNumber;
             Nationality = data.nationality;
-            Name = new string(data.name);
+            byte[] nameBytes = Encoding.UTF8.GetBytes(data.name);
+            Name = Encoding.UTF8.GetString(nameBytes);
             YourTelemetry = data.yourTelemetry;
             Platform = data.platform;
         }

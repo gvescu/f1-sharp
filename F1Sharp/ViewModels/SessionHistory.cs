@@ -32,10 +32,10 @@ namespace F1Sharp.ViewModels
         private byte _bestSector3LapNum;
 
         [ObservableProperty]
-        private ObservableCollection<LapHistory> _lapHistoryData;
+        private ObservableCollection<LapHistory> _lapData;
 
         [ObservableProperty]
-        private ObservableCollection<TyreStintHistory> _tyreHistoryData;
+        private ObservableCollection<TyreStintHistory> _tyreData;
 
         public void Update(SessionHistoryPacket packet, ObservableCollection<LapHistory> lapHistoryData, ObservableCollection<TyreStintHistory> tyreStintHistoryData)
         {
@@ -47,14 +47,14 @@ namespace F1Sharp.ViewModels
             BestSector1LapNum = packet.bestSector1Lapnum;
             BestSector2LapNum = packet.bestSector2Lapnum;
             BestSector3LapNum = packet.bestSector3Lapnum;
-            LapHistoryData = lapHistoryData;
-            TyreHistoryData = tyreStintHistoryData;
+            LapData = lapHistoryData;
+            TyreData = tyreStintHistoryData;
         }
 
         public SessionHistory()
         {
-            LapHistoryData = new();
-            TyreHistoryData = new();
+            LapData = new();
+            TyreData = new();
         }
     }
 }
