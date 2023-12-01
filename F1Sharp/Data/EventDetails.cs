@@ -12,6 +12,7 @@ namespace F1Sharp.Data
         /// Index of the car that achieved the fastest lap
         /// </summary>
         public byte vehicleIdx;
+
         /// <summary>
         /// Lap time in seconds
         /// </summary>
@@ -64,26 +65,32 @@ namespace F1Sharp.Data
         /// Penalty type
         /// </summary>
         public byte penaltyType;
+
         /// <summary>
         /// Infringement type
         /// </summary>
         public byte infringementType;
+
         /// <summary>
         /// Index of the car the penalty is applied to
         /// </summary>
         public byte vehicleIdx;
+
         /// <summary>
         /// Index of the other car involved
         /// </summary>
         public byte otherVehicleIdx;
+
         /// <summary>
         /// Time gained or time spent doing action in seconds
         /// </summary>
         public byte time;
+
         /// <summary>
         /// Lap the penalty ocurred on
         /// </summary>
         public byte lapNum;
+
         /// <summary>
         /// Number of places gained by this
         /// </summary>
@@ -100,24 +107,29 @@ namespace F1Sharp.Data
         /// Index of the car triggering the event
         /// </summary>
         public byte vehicleIdx;
+
         /// <summary>
         /// Top speed achieved in kilometers per hour
         /// </summary>
         public float speed;
+
         /// <summary>
         /// Overall fastest speed in session
         /// 1 = in session; 0 = otherwise
         /// </summary>
         public byte isOverallFastestInSession;
+
         /// <summary>
         /// Fastest speed for driver in session
         /// 1 = in session; 0 = otherwise
         /// </summary>
         public byte isDriverFastestInSession;
+
         /// <summary>
         /// Index of the fastest car in the session
         /// </summary>
         public byte fastestVehicleIdxInSession;
+
         /// <summary>
         /// Speed of the fastest car in the session
         /// </summary>
@@ -170,6 +182,7 @@ namespace F1Sharp.Data
         /// Frame identifier flashed back to
         /// </summary>
         public uint flashbackFrameIdentifier;
+
         /// <summary>
         /// Session time flashed back to
         /// </summary>
@@ -198,6 +211,7 @@ namespace F1Sharp.Data
         /// Index of the car overtaking
         /// </summary>
         public byte overtakingVehicleIdx;
+
         /// <summary>
         /// Index of the car being overtaken
         /// </summary>
@@ -226,7 +240,7 @@ namespace F1Sharp.Data
         public Penalty penalty;
 
         [FieldOffset(0)]
-        public SpeedTrap sppedTrap;
+        public SpeedTrap speedTrap;
 
         [FieldOffset(0)]
         public StartLights startLights;
@@ -246,5 +260,4 @@ namespace F1Sharp.Data
         [FieldOffset(0)]
         public Overtake overtake;
     }
-
 }
